@@ -12,10 +12,10 @@ interface CountryListProps {
 }
 
 export const CountryList: React.FC<CountryListProps> = ({ 
-  countries, 
-  hasMore, 
-  loadingMore, 
-  onLoadMore 
+  countries,
+  hasMore,
+  loadingMore,
+  onLoadMore
 }) => {
   const [selectedCountry, setSelectedCountry] = useState<Country | null>(null);
   const observerRef = useRef<HTMLDivElement>(null);
