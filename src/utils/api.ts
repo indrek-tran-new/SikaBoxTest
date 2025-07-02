@@ -15,14 +15,14 @@ export const fetchAllCountries = async (): Promise<Country[]> => {
       'area',
       'languages'
     ].join(',');
-    
+
     const response = await fetch(`${BASE_URL}/all?fields=${fields}`);
-    
+
     if (!response.ok) {
       console.error(`API error: ${response.status} ${response.statusText}`);
       throw new Error('Failed to fetch countries');
     }
-    
+
     return await response.json();
   } catch (error) {
     console.error('Error fetching countries:', error);
